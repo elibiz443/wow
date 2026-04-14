@@ -23,9 +23,9 @@ if (!isset($_SESSION['username'])) {
 <body class="antialiased max-w-full overflow-x-hidden">
 
   <div class="flex flex-col gap-6">
-    <nav class="w-[94%] mx-auto glass rounded-[2rem] px-8 py-4 flex justify-between items-center shadow-xl mt-4 lg:mt-8">
+    <nav class="w-[94%] mx-auto glass rounded-[2rem] px-8 py-4 flex justify-between items-center shadow-xl shadow-neutral-500 mt-4 lg:mt-8">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
+        <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-neutral-500">
           <span class="text-white font-black text-xl">W</span>
         </div>
         <div>
@@ -42,16 +42,16 @@ if (!isset($_SESSION['username'])) {
       </div>
     </nav>
 
-    <main class="min-h-screen w-[94%] mx-auto flex-1 flex gap-6 overflow-hidden">
+    <main class="min-h-screen w-[94%] mx-auto flex-1 flex gap-6">
       <aside class="w-80 flex flex-col gap-6">
-        <div class="glass rounded-[2.5rem] p-6 shadow-lg">
+        <div class="glass rounded-[2.5rem] p-6 shadow-lg shadow-neutral-500">
           <h3 class="text-xs font-black text-indigo-600 uppercase tracking-widest mb-4">Network Discovery</h3>
           <button id="add-screen-btn" class="w-full bg-gradient-to-r from-cyan-500 to-indigo-600 text-white font-bold py-4 rounded-2xl shadow-lg shadow-indigo-500/30 hover:scale-[1.02] transition active:scale-95">
             Sync Current Viewport
           </button>
         </div>
 
-        <div class="glass rounded-[2.5rem] p-6 flex-1 flex flex-col shadow-lg overflow-hidden">
+        <div class="glass rounded-[2.5rem] p-6 flex-1 flex flex-col shadow-lg shadow-neutral-500">
           <h3 class="text-xs font-black text-indigo-600 uppercase tracking-widest mb-4">Linked Nodes</h3>
           <div id="device-list" class="space-y-3 overflow-y-auto pr-2 flex-1">
             <div class="p-4 bg-white/40 rounded-2xl border border-white/60 flex items-center justify-between">
@@ -66,7 +66,7 @@ if (!isset($_SESSION['username'])) {
       </aside>
 
       <div class="flex-1 flex flex-col gap-6">
-        <div class="glass rounded-[3rem] flex-1 relative overflow-hidden shadow-2xl flex items-center justify-center group">
+        <div class="glass rounded-[3rem] flex-1 relative shadow-2xl shadow-neutral-500 flex items-center justify-center group">
           <video id="main-video" class="max-w-none pointer-events-none" src="content.mp4" playsinline loop></video>
           <div class="absolute bottom-6 left-6 flex gap-3">
             <div class="glass px-4 py-2 rounded-xl text-[10px] font-bold text-slate-700">COORD: <span id="coord-display">0,0</span></div>
@@ -74,7 +74,7 @@ if (!isset($_SESSION['username'])) {
           </div>
         </div>
 
-        <div class="glass rounded-[2rem] p-4 flex items-center justify-between shadow-xl">
+        <div class="glass rounded-[2rem] p-4 flex items-center justify-between shadow-xl shadow-neutral-500">
           <div class="flex gap-2">
             <button id="play-btn" class="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
